@@ -9,6 +9,11 @@ void i18n
   .use(initReactI18next)
   .init({
     fallbackLng: "zh-CN",
+    supportedLngs: ["zh-CN", "en", "ja", "weeb"],
+    load: "currentOnly",
+    backend: {
+      loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/{{ns}}.json`,
+    },
     returnEmptyString: false,
     interpolation: {
       escapeValue: false,
