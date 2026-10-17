@@ -80,6 +80,15 @@ export default function PreferencesDialog({
             >
               English (Japanese)
             </Button>
+            <Button
+              active={language === "zh-CN"}
+              onClick={() => {
+                setLanguage("zh-CN");
+                void i18n.changeLanguage("zh-CN");
+              }}
+            >
+              简体中文
+            </Button>
             {/* <Button
               active={language === "ja"}
               onClick={() => {
